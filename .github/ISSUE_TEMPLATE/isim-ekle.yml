@@ -1,0 +1,38 @@
+name: İsim ekle / Add a name
+description: Whisper'ın yanlış yazdığı bir kişi ya da şirketi öner.
+title: "[İsim] "
+labels: ["isim-onerisi"]
+body:
+  - type: input
+    id: dogru
+    attributes:
+      label: Doğru yazım
+      description: Örnek, Mustafa Namoğlu ya da ikas
+    validations:
+      required: true
+  - type: dropdown
+    id: tur
+    attributes:
+      label: Tür
+      options: [Kişi, Şirket / marka]
+    validations:
+      required: true
+  - type: input
+    id: yanlis
+    attributes:
+      label: Whisper'ın yazdığı yanlış halleri
+      description: Virgülle ayır. Örnek, Anamoğlu, Ramoğlu
+  - type: input
+    id: kaynak
+    attributes:
+      label: Herkese açık kaynak bağlantısı
+      description: Haber, şirket sitesi, Wikipedia ya da kişinin kendi kanalındaki röportaj. Doğru yazımı göstermeli.
+    validations:
+      required: true
+  - type: checkboxes
+    id: onay
+    attributes:
+      label: Onay
+      options:
+        - label: Bu kişi girişimci, yönetici ya da yatırımcı olarak kamuya açık biçimde tanınıyor; özel bir kişi değil.
+          required: true

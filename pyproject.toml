@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turkce-asr-ozel-isim"
+version = "0.1.0"
+description = "Turkish proper name correction for Whisper and WhisperX transcripts: fix misheard people and company names in subtitles."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["turkish", "whisper", "whisperx", "asr", "speech-to-text", "subtitles", "transcript-correction", "named-entities", "proper-nouns", "türkçe", "altyazı", "özel isim"]
+classifiers = [
+    "Natural Language :: Turkish",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.optional-dependencies]
+claude = ["anthropic"]
+
+[project.scripts]
+turkce-asr-ozel-isim = "turkce_asr_ozel_isim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+turkce_asr_ozel_isim = ["data/*.json"]

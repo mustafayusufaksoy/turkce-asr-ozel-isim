@@ -1,0 +1,15 @@
+name: İsmimi kaldır / Remove a name
+description: Adınızın listeden çıkarılmasını isteyin. Gerekçe göstermeniz gerekmez.
+title: "[Kaldırma] "
+labels: ["kaldirma-talebi"]
+body:
+  - type: input
+    id: isim
+    attributes:
+      label: Listeden çıkarılacak ad
+    validations:
+      required: true
+  - type: textarea
+    id: not
+    attributes:
+      label: Not (isteğe bağlı)
