@@ -5,8 +5,10 @@ on:
   pull_request:
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # ubuntu-latest (26.04) no longer ships Python 3.9
+    runs-on: ubuntu-24.04
     strategy:
+      fail-fast: false
       matrix:
         python: ["3.9", "3.12"]
     steps:

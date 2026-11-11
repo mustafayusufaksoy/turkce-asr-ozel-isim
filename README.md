@@ -6,7 +6,7 @@
 
 [![test](https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim/actions/workflows/test.yml/badge.svg)](https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim/actions/workflows/test.yml)
 [![Kod: MIT](https://img.shields.io/badge/kod-MIT-blue.svg)](LICENSE)
-[![Veri: CC0](https://img.shields.io/badge/veri-CC0-lightgrey.svg)](LICENSE)
+[![Veri: CC0](https://img.shields.io/badge/veri-CC0-lightgrey.svg)](LICENSE-DATA)
 
 ## Sorun
 
@@ -110,7 +110,7 @@ Adınızın listeden çıkarılmasını istiyorsanız [kaldırma formunu](https:
 
 ## Lisans
 
-Kod [MIT](LICENSE). Ad listesi CC0 1.0.
+Kod [MIT](LICENSE). Ad listesi [CC0 1.0](LICENSE-DATA).
 
 ---
 
