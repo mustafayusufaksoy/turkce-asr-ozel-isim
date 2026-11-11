@@ -5,6 +5,7 @@
 *Turkish proper name correction for Whisper and WhisperX: fixes misheard people and company names in speech-to-text transcripts and subtitles. [English below](#english).*
 
 [![test](https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim/actions/workflows/test.yml/badge.svg)](https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim/actions/workflows/test.yml)
+[![PyPI](https://img.shields.io/pypi/v/turkce-asr-ozel-isim.svg)](https://pypi.org/project/turkce-asr-ozel-isim/)
 [![Kod: MIT](https://img.shields.io/badge/kod-MIT-blue.svg)](LICENSE)
 [![Veri: CC0](https://img.shields.io/badge/veri-CC0-lightgrey.svg)](LICENSE-DATA)
 
@@ -34,7 +35,7 @@ Bir dil modeline "düzelt" demek yetmez: model adı tanımıyorsa aynı yanlış
 ## Kurulum
 
 ```bash
-pip install "turkce-asr-ozel-isim[claude] @ git+https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim"
+pip install "turkce-asr-ozel-isim[claude]"
 ```
 
 Python 3.9 ve üzeri. Çekirdeğin bağımlılığı yok; `[claude]` yalnız Claude ile seçim için gerekir.
@@ -121,7 +122,7 @@ Kod [MIT](LICENSE). Ad listesi [CC0 1.0](LICENSE-DATA).
 Speech-to-text models consistently misspell Turkish proper nouns, and asking an LLM to fix them fails when the model does not know the name. This project uses a three-step pipeline: a lexicon and fuzzy matching propose candidates, a selector returns only candidate **numbers** so it cannot invent a name, and code applies the change while preserving punctuation, Turkish suffixes and word timestamps.
 
 ```bash
-pip install "turkce-asr-ozel-isim[claude] @ git+https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim"
+pip install "turkce-asr-ozel-isim[claude]"
 turkce-asr-ozel-isim transcript.json --selector claude -o fixed.json
 ```
 
