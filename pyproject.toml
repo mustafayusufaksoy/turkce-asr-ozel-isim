@@ -18,6 +18,10 @@ classifiers = [
 ]
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim"
+Issues = "https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim/issues"
+
 [project.optional-dependencies]
 claude = ["anthropic"]
 
