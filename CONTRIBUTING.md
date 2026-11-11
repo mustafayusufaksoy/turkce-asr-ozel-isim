@@ -34,3 +34,7 @@ Her ekleme bir insan tarafından incelenir; otomatik birleştirme yoktur. Yanlı
 ## Listeden çıkmak
 
 Adınızın çıkarılmasını istiyorsanız **Issues › İsmimi kaldır** formunu doldurun. Gerekçe istemiyoruz.
+
+## Sürüm çıkarmak
+
+Bakımcılar için: [docs/surum-cikarma.md](docs/surum-cikarma.md).
