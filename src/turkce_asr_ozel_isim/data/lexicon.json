@@ -9,7 +9,11 @@
   "source": [
    "wikidata",
    "youtube-title"
-  ]
+  ],
+  "wikidata": "Q4666021",
+  "image": "Abdullah Kiğılı.jpg",
+  "image_license": "CC BY-SA 3.0",
+  "image_author": "Serkan Yakın"
  },
  {
   "name": "Acun Ilıcalı",
@@ -17,7 +21,11 @@
   "source": [
    "wikidata",
    "youtube-title"
-  ]
+  ],
+  "wikidata": "Q328247",
+  "image": "AcunIlıcalı.jpg",
+  "image_license": "CC BY-SA 3.0",
+  "image_author": "Serkan Yakın"
  },
  {
   "name": "Ahmet Nazif Zorlu",
@@ -691,7 +699,11 @@
   "source": [
    "wikidata",
    "youtube-title"
-  ]
+  ],
+  "wikidata": "Q12071778",
+  "image": "Portrait of Hamdi Ulukaya.jpg",
+  "image_license": "CC BY-SA 3.0",
+  "image_author": "Michael Gonda"
  },
  {
   "name": "Hande Çilingir",
@@ -1095,7 +1107,8 @@
   "source": [
    "wikidata",
    "youtube-title"
-  ]
+  ],
+  "wikidata": "Q27652274"
  },
  {
   "name": "Nuri Develi",

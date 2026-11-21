@@ -19,6 +19,12 @@ En kolay yol **Issues › İsim ekle** formu. Pull request açmak istersen `src/
 | `misspellings` | modelin yazdığı yanlış halleri |
 | `context_required` | gerçek bir kelime olan yanlış yazımlar ("ikaz"); yalnız şirket aynı transkriptte geçiyorsa aday olur |
 | `source` | `wikidata`, `youtube-title`, `youtube-channel`, `news`, `company-site` |
+| `wikidata` | Wikidata kimliği: `Q` ve rakam, ör. `Q12071778` (isteğe bağlı; kaydı yoksa yazılmaz) |
+| `image` | Wikidata'nın kişiye bağladığı resim (P18): Commons dosya adı, ör. `Portrait of Hamdi Ulukaya.jpg` (P18 yoksa yazılmaz) |
+| `image_license` | fotoğrafın Commons'taki lisansı, ör. `CC BY-SA 3.0`; `image` varsa zorunlu |
+| `image_author` | fotoğrafçı (Commons'taki yazar bilgisi); `image` varsa zorunlu |
+
+Fotoğraf dosyası eklenmez, yalnız bilgisi: liste CC0, Commons fotoğrafları çoğunlukla CC BY-SA, dosya eklenirse lisanslar çakışır. Fotoğraf yalnız Wikidata'daki P18'den alınır; böylece fotoğrafın o kişiye ait olduğunu Wikidata doğrulamış olur. Lisans ve fotoğrafçı Commons API'den (`prop=imageinfo&iiprop=extmetadata`: `LicenseShortName`, `Artist`) alınır.
 
 Kayıt kuralları testlerde (`tests/test_lexicon.py`), her pull request'te otomatik çalışır.
 
