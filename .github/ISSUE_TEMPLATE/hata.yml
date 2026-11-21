@@ -1,0 +1,34 @@
+name: Hata bildirimi / Bug report
+description: Araç çalışmıyor ya da yanlış düzeltme yapıyor
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Yanlış yazılan bir **isim** önermek için "İsim ekle" formunu kullan. API anahtarı ve özel transkript içeriği **paylaşma**.
+        To suggest a name, use the "Add a name" form. Never share API keys or private transcript content.
+  - type: textarea
+    id: sorun
+    attributes:
+      label: Ne oldu? / What happened?
+      description: Ne bekliyordun, ne oldu? Hata mesajı varsa ekle.
+    validations:
+      required: true
+  - type: textarea
+    id: ornek
+    attributes:
+      label: Küçük örnek / Minimal example
+      description: Sorunu gösteren birkaç kelimelik `words` girdisi ya da komut
+      render: json
+  - type: input
+    id: surumler
+    attributes:
+      label: Sürümler / Versions
+      placeholder: "turkce-asr-ozel-isim 0.1.0, Python 3.12, WhisperX 3.x"
+    validations:
+      required: true
+  - type: dropdown
+    id: secici
+    attributes:
+      label: Seçici / Selector
+      options: ["yok (yalnız adaylar)", "claude", "kendi fonksiyonum / custom"]
