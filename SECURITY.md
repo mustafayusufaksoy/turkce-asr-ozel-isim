@@ -13,7 +13,7 @@ Sözlükte yalnızca kamuya açık biçimde tanınan kişi ve şirketlerin **adl
 ## Notlar
 
 - `--selector claude` kullanırken `ANTHROPIC_API_KEY` ortam değişkeninden okunur; anahtarı koda ya da issue'lara yazma.
-- Claude seçicisi yalnızca aday listesini ve ilgili cümleyi gönderir; transkriptin tamamını göndermez.
+- Claude seçicisi yalnızca adayları ve her adayın çevresindeki birkaç kelimeyi gönderir; transkriptin tamamını göndermez.
 
 ---
 
