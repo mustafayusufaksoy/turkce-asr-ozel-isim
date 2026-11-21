@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
   pull_request:
+permissions:
+  contents: read
+
 jobs:
   test:
     # ubuntu-latest (26.04) no longer ships Python 3.9
