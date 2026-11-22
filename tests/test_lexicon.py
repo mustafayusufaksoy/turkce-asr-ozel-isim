@@ -9,7 +9,9 @@ from turkce_asr_ozel_isim import spelling_key
 
 TYPES = {"person", "company"}
 SOURCES = {"wikidata", "youtube-title", "youtube-channel", "news", "company-site"}
-FIELDS = {"name", "type", "company", "misspellings", "context_required", "source"}
+FIELDS = {"name", "type", "company", "misspellings", "context_required", "source",
+          "wikidata", "image", "image_license", "image_author"}
+WIKIDATA_ID = re.compile(r"^Q[1-9][0-9]*$")  # "Q" + digits, e.g. Q12071778
 RECORDS = json.loads(resources.files("turkce_asr_ozel_isim")
                      .joinpath("data/lexicon.json").read_text(encoding="utf-8"))
 
@@ -38,6 +40,25 @@ class LexiconRules(unittest.TestCase):
     def test_no_duplicates(self):
         repeated = [k for k, n in Counter(spelling_key(r["name"]) + r["type"] for r in RECORDS).items() if n > 1]
         self.assertEqual(repeated, [])
+
+    def test_wikidata_is_q_and_digits(self):
+        for r in RECORDS:
+            if "wikidata" in r:
+                with self.subTest(r["name"]):
+                    self.assertRegex(r["wikidata"], WIKIDATA_ID)
+
+    def test_image_has_license_and_author(self):
+        for r in RECORDS:
+            if "image" in r:
+                with self.subTest(r["name"]):
+                    self.assertTrue(r["image"].strip())
+                    self.assertTrue(r.get("image_license", "").strip(), "image needs image_license")
+                    self.assertTrue(r.get("image_author", "").strip(), "image needs image_author")
+                    self.assertIn("wikidata", r, "image comes from the Wikidata item (P18)")
+            else:
+                with self.subTest(r["name"]):
+                    self.assertNotIn("image_license", r, "image_license without image")
+                    self.assertNotIn("image_author", r, "image_author without image")
 
     def test_misspelling_differs_from_name(self):
         for r in RECORDS:
