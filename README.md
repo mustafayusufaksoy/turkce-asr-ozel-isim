@@ -6,6 +6,7 @@
 
 [![test](https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim/actions/workflows/test.yml/badge.svg)](https://github.com/mustafayusufaksoy/turkce-asr-ozel-isim/actions/workflows/test.yml)
 [![PyPI](https://img.shields.io/pypi/v/turkce-asr-ozel-isim.svg)](https://pypi.org/project/turkce-asr-ozel-isim/)
+[![Downloads](https://static.pepy.tech/badge/turkce-asr-ozel-isim)](https://pepy.tech/projects/turkce-asr-ozel-isim)
 [![Kod: MIT](https://img.shields.io/badge/kod-MIT-blue.svg)](LICENSE)
 [![Veri: CC0](https://img.shields.io/badge/veri-CC0-lightgrey.svg)](LICENSE-DATA)
 
